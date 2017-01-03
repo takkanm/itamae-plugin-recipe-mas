@@ -1,8 +1,7 @@
 # Itamae::Plugin::Recipe::Mas
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/itamae/plugin/recipe/mas`. To experiment with that code, run `bin/console` for an interactive prompt.
+Plugin to support the [mas](https://github.com/mas-cli/mas) for [Itamae](https://github.com/itamae-kitchen/itamae)
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +21,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Requirement
+
+You should install `mas`.
+
+```
+$ brew install mas
+```
+
+### Recipe
+
+##### your recipe example
+
+```ruby
+include_recipe 'mas::package'
+```
+
+### Node
+case was an example the yaml
+
+##### your node example
+
+```yaml
+mas:
+  install_apps:
+    - 406056744 Evernote (6.10)
+    - 409183694 Keynote (6.6.2)
+    - 918858936 Airmail 3 (3.2.1)
+    - 407963104 Pixelmator (3.6)
+```
 
 ## Development
 
@@ -32,5 +59,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/itamae-plugin-recipe-mas.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/takkanm/itamae-plugin-recipe-mas.
